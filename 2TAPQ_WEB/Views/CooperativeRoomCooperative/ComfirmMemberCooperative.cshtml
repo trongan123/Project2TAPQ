@@ -1,0 +1,147 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutCooperative.cshtml";
+}
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+        <div class="row">
+            <ol class="breadcrumb">
+                <li><a href="#"><svg class="glyph stroked home">
+                            <use xlink:href="#stroked-home"></use>
+                        </svg></a></li>
+                <li class="active">Danh sách người nộp đơn</li>
+            </ol>
+        </div>
+        <!--/.row-->
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Danh sách người nộp đơn</h1>
+            </div>
+        </div>
+        <!--/.row-->
+        <div class="alert alert-success">Thay Đổi Trạng Trái Thành Công !</div>
+        <div id="toolbar" class="btn-group">
+
+
+            <input type="text" class="form-control" placeholder="Search">
+
+
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                        <table data-toolbar="#toolbar" data-toggle="table">
+
+                            <thead>
+                                <tr>
+                                    <th data-field="name">Họ và Tên</th>
+                                    <th data-field="price">Email</th>
+                                    <th data-field="phone">Số Điện Thoại</th>
+                                    <th data-field="address">Khu Vực</th>
+                                    <th data-field="date">Ngày Gửi </th>
+                                    <th>Status</th>
+                                    <th>Hành động</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+
+                                    <td style="">Lê Minh Trí</td>
+                                    <td style="">trilm2007@gmail.com</td>
+                                    <td style="">0706699020</td>
+                                    <td style="">Cần Thơ, Ô Môn, Long Hưng</td>
+                                    <td style="">20/07/2000</td>
+
+                                    <td><span class="label label-warning">Waiting</span></td>
+                                    <td class="form-group">
+                                        <a href="edit_member.html" class="btn btn-success"><i
+                                                class="glyphicon glyphicon-ok"></i></a>
+                                        <a href="#" class="btn btn-danger"
+                                            onclick="document.getElementById('id01').style.display='block'"><i
+                                                class="glyphicon glyphicon-remove"></i></a>
+                                        <div id="id01" class="modal">
+                                            <span onclick="document.getElementById('id01').style.display='none'"
+                                                class="close" title="Close Modal">×</span>
+
+                                            <form class="modal-content ">
+                                                <div class="container">
+                                                    <h1>Xóa Thành Viên</h1>
+                                                    <p>Bạn có chắc là muốn xóa không?</p>
+
+                                                    <div class="clearfix">
+                                                        <button type="button"
+                                                            onclick="document.getElementById('id01').style.display='none'"
+                                                            class="cancelbtn">Thoát</button>
+                                                        <button type="button"
+                                                            onclick="document.getElementById('id01').style.display='none'"
+                                                            class="deletebtn">Xóa</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+
+
+                                    <td style="">Tg Lol Ân</td>
+                                    <td style="">AnLol@gmail.com</td>
+                                    <td style="">AnLol</td>
+                                    <td style="">Sóc Xà Bay</td>
+                                    <td style="">04/10/2022</td>
+                                    <td><span class="label label-warning">Waiting</span></td>
+
+                                    <td class="form-group">
+                                        <a href="edit_member.html" class="btn btn-success"><i
+                                                class="glyphicon glyphicon-ok"></i></a>
+                                        <a href="#" class="btn btn-danger"
+                                            onclick="document.getElementById('id01').style.display='block'"><i
+                                                class="glyphicon glyphicon-remove"></i></a>
+                                        <div id="id01" class="modal">
+                                            <span onclick="document.getElementById('id01').style.display='none'"
+                                                class="close" title="Close Modal">×</span>
+
+
+                                            <form class="modal-content ">
+                                                <div class="container">
+                                                    <h1>Xóa Thành Viên</h1>
+                                                    <p>Bạn có chắc là muốn xóa không?</p>
+
+                                                    <div class="clearfix">
+                                                        <button type="button"
+                                                            onclick="document.getElementById('id01').style.display='none'"
+                                                            class="cancelbtn">Thoát</button>
+                                                        <button type="button"
+                                                            onclick="document.getElementById('id01').style.display='none'"
+                                                            class="deletebtn">Xóa</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="panel-footer">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!--/.row-->
+
+
+    </div>

@@ -1,0 +1,44 @@
+﻿@model BusinessObjects.Models.DetailReceiptsPayment
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutFarm.cshtml";
+    BusinessObjects.Models.ReceiptsPayment receipt = ViewBag.receipts as BusinessObjects.Models.ReceiptsPayment;
+
+}
+<link rel="stylesheet" href="~/css/cssfarm/createPond.css">
+<main>
+    <div class="testbox">
+        <form asp-action="AddPayment">
+            <input type="hidden" asp-for="IdInvoice" value="@receipt.IdInvoice" />
+            <input type="hidden" asp-for="IdDetailReceiptsPayments" value="DRP0000001" />
+            <input type="hidden" asp-for="Description" value="" />
+            <input type="hidden" asp-for="Status" value="2" />
+             <input type="hidden" asp-for="NameStaff" value="@ViewBag.namestaff" />
+            <div class="banner">
+                <h1>Thông tin hóa đơn cần nhập</h1>
+                <img class="img_background" src="~/images/background.jpg" alt="">
+            </div>
+
+            <div class="item">
+                <label for="city">Người Nhập <span>*</span></label>
+                <input type="text" value="@ViewBag.namestaff" name="Staff" disabled/>
+            </div>
+            <div class="item">
+                <label for="name">Tên sản phẩm<span>*</span></label>
+                <input id="Name" type="text" asp-for="Name" name="name" required />
+            </div>
+            <div class="item">
+                <label for="name">Số lượng<span>*</span></label>
+                <input id="Quanlity" type="number" asp-for="Quanlity"  name="Quanlity" required />
+            </div>
+            <div class="item">
+                <label for="state">Giá<span>*</span></label>
+                <input id="Price" type="text" asp-for="Price" name="Price" required />
+            </div>
+            
+            <div class="btn-block">
+                <button type="submit">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+</main>

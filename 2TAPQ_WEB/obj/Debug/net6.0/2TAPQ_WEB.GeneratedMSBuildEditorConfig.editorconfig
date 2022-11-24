@@ -1,0 +1,296 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = _2TAPQ_WEB
+build_property.RootNamespace = _2TAPQ_WEB
+build_property.ProjectDir = D:\Visual Studio\2TAPQ\2TAPQ_WEB\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Visual Studio\2TAPQ\2TAPQ_WEB
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/AccountAdmin/CreateFarmerAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudEFkbWluXENyZWF0ZUZhcm1lckFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/AccountAdmin/EditAccountAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudEFkbWluXEVkaXRBY2NvdW50QWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/AccountAdmin/FarmerAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudEFkbWluXEZhcm1lckFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/AccountAdmin/HistoryDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudEFkbWluXEhpc3RvcnlEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/AccountCooperative/AccountCooperative.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudENvb3BlcmF0aXZlXEFjY291bnRDb29wZXJhdGl2ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/AccountCooperative/CreateStaff.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudENvb3BlcmF0aXZlXENyZWF0ZVN0YWZmLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/AccountCooperative/EditStaff.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudENvb3BlcmF0aXZlXEVkaXRTdGFmZi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/AccountCooperative/StaffCooperative.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudENvb3BlcmF0aXZlXFN0YWZmQ29vcGVyYXRpdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Account/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Account/CreateStaff.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDcmVhdGVTdGFmZi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Account/EditStaff.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFZGl0U3RhZmYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Account/JoinCooperative.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxKb2luQ29vcGVyYXRpdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Account/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Account/StaffFarm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTdGFmZkZhcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/CooperativeRoomAdmin/AreaAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29vcGVyYXRpdmVSb29tQWRtaW5cQXJlYUFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/CooperativeRoomAdmin/CooperativeAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29vcGVyYXRpdmVSb29tQWRtaW5cQ29vcGVyYXRpdmVBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/CooperativeRoomAdmin/CreateCooperativeAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29vcGVyYXRpdmVSb29tQWRtaW5cQ3JlYXRlQ29vcGVyYXRpdmVBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/CooperativeRoomAdmin/EditCooperativeAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29vcGVyYXRpdmVSb29tQWRtaW5cRWRpdENvb3BlcmF0aXZlQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/CooperativeRoomCooperative/ComfirmMemberCooperative.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29vcGVyYXRpdmVSb29tQ29vcGVyYXRpdmVcQ29tZmlybU1lbWJlckNvb3BlcmF0aXZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/CooperativeRoomCooperative/CooperativeRoomCooperative.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29vcGVyYXRpdmVSb29tQ29vcGVyYXRpdmVcQ29vcGVyYXRpdmVSb29tQ29vcGVyYXRpdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/FishCategoryAdmin/AddFishCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlzaENhdGVnb3J5QWRtaW5cQWRkRmlzaENhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/FishCategoryAdmin/ConfirmFishAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlzaENhdGVnb3J5QWRtaW5cQ29uZmlybUZpc2hBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/FishCategoryAdmin/EditFishCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlzaENhdGVnb3J5QWRtaW5cRWRpdEZpc2hDYXRlZ29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/FishCategoryAdmin/FishCategoryAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlzaENhdGVnb3J5QWRtaW5cRmlzaENhdGVnb3J5QWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/FishCategoryCooperative/AddFishCategoryCooperative.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlzaENhdGVnb3J5Q29vcGVyYXRpdmVcQWRkRmlzaENhdGVnb3J5Q29vcGVyYXRpdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/FishCategoryCooperative/FishCategoryCooperative.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlzaENhdGVnb3J5Q29vcGVyYXRpdmVcRmlzaENhdGVnb3J5Q29vcGVyYXRpdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Home/Blog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCbG9nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Home/Services.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZXJ2aWNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/MemberCooperative/ComfirmMemberCooperative.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyQ29vcGVyYXRpdmVcQ29tZmlybU1lbWJlckNvb3BlcmF0aXZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/MemberCooperative/DetailMemberCooperative.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyQ29vcGVyYXRpdmVcRGV0YWlsTWVtYmVyQ29vcGVyYXRpdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/MemberCooperative/EditMenberCooperative.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyQ29vcGVyYXRpdmVcRWRpdE1lbmJlckNvb3BlcmF0aXZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/MemberCooperative/MemberCooperative.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyQ29vcGVyYXRpdmVcTWVtYmVyQ29vcGVyYXRpdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/PondAdmin/AddPondAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9uZEFkbWluXEFkZFBvbmRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/PondAdmin/ChartPondAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9uZEFkbWluXENoYXJ0UG9uZEFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/PondAdmin/EditPondAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9uZEFkbWluXEVkaXRQb25kQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/PondAdmin/PondAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9uZEFkbWluXFBvbmRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/PondCooperative/AddPondCooperative.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9uZENvb3BlcmF0aXZlXEFkZFBvbmRDb29wZXJhdGl2ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/PondCooperative/EditPondCooperative.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9uZENvb3BlcmF0aXZlXEVkaXRQb25kQ29vcGVyYXRpdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/PondCooperative/PondCooperative.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9uZENvb3BlcmF0aXZlXFBvbmRDb29wZXJhdGl2ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Pond/AddPond.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9uZFxBZGRQb25kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Pond/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9uZFxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Pond/Detailpond.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9uZFxEZXRhaWxwb25kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Pond/EditPondDialy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9uZFxFZGl0UG9uZERpYWx5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Pond/HistoryDaily.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9uZFxIaXN0b3J5RGFpbHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Pond/Pond.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9uZFxQb25kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Pond/ReportDialy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9uZFxSZXBvcnREaWFseS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/ReceiptsPayment/AddPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWlwdHNQYXltZW50XEFkZFBheW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/ReceiptsPayment/AddReceipts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWlwdHNQYXltZW50XEFkZFJlY2VpcHRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/ReceiptsPayment/EditPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWlwdHNQYXltZW50XEVkaXRQYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/ReceiptsPayment/EditReceipts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWlwdHNQYXltZW50XEVkaXRSZWNlaXB0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/ReceiptsPayment/Payment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWlwdHNQYXltZW50XFBheW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/ReceiptsPayment/Receipts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWlwdHNQYXltZW50XFJlY2VpcHRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Shared/_LayoutCooperative.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRDb29wZXJhdGl2ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Shared/_LayoutFarm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRGYXJtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Shared/_LayoutHome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRIb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/StoreHouse/AddItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVIb3VzZVxBZGRJdGVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/StoreHouse/EditItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVIb3VzZVxFZGl0SXRlbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/StoreHouse/HistoryStoreHouse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVIb3VzZVxIaXN0b3J5U3RvcmVIb3VzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/StoreHouse/StoreHouse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVIb3VzZVxTdG9yZUhvdXNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio/2TAPQ/2TAPQ_WEB/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-irqc5cwwuv

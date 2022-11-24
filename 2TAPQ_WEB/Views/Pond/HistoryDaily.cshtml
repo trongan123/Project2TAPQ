@@ -1,0 +1,46 @@
+﻿@model IEnumerable<BusinessObjects.Models.PondDiary>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutFarm.cshtml";
+
+}
+<link rel="stylesheet" href="~/css/daily.css">
+
+<main>
+    <div class="line w3-center">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                DateTime a = Convert.ToDateTime(@item.Date);
+                <div class="card ">
+                    <h2>@a.ToString("dd/M/yyyy")</h2>
+                    <div class="text">
+                        <p>Mật độ nước: @item.WaterLevel </p>
+                        <p>Nhiệt độ: @item.Temperature</p>
+                        <p>Độ pH: @item.Ph </p>
+                        <p>Độ mặn: @item.Sanility </p>
+                        <p>Trạng Thái: @item.FishStatus  </p>
+
+                    </div>
+                </div>
+            }
+
+
+        </div>
+    </div>
+
+
+    <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+            <a href="#" class="w3-bar-item w3-buttonw3-hover-green">«</a>
+            <a href="#" class="w3-bar-item w3-green w3-button">1</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-green">2</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-green">3</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-green">4</a>
+            <a href="#" class="w3-bar-item">...</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-green">Cuối</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-green">»</a>
+        </div>
+    </div>
+
+</main>

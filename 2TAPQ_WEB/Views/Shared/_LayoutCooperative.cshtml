@@ -1,0 +1,215 @@
+﻿@{
+
+    IEnumerable<BusinessObjects.Models.Notify> notifiAll = ViewBag.notifiAll as IEnumerable<BusinessObjects.Models.Notify>;
+    IEnumerable<BusinessObjects.Models.Notify> notifi = ViewBag.notifi as IEnumerable<BusinessObjects.Models.Notify>;
+    var not = ViewBag.notifiNum;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooperate</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/datepicker3.css" rel="stylesheet">
+    <link href="~/css/bootstrap-table.css" rel="stylesheet">
+    <link href="~/css/styles.css" rel="stylesheet">
+    <link href="~/css/modal.css" rel="stylesheet">
+
+    <!--Icons-->
+    <script src="~/js/lumino.glyphs.js"></script>
+
+    <!-- notification css -->
+    <link href="~/css/notification.css" rel="stylesheet">
+    <!-- icon new -->
+    <link href="~/fonts/themify-icons/themify-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+
+
+        <div class="notifications">
+            <div class="icon_wrap ">
+                <i class="ti-bell"></i>
+                <span class="badge" id="notify">@ViewBag.notifiNum</span>
+            </div>
+
+            <div class="notification_dd">
+                <ul class="notification_ul">
+                    @if (notifi != null)
+                    {
+                        @foreach (var item in notifi)
+                        {
+                            <li class="starbucks success">
+
+                                <div class="notify_data">
+                                    <div class="title">
+                                        @item.Name
+                                    </div>
+                                    <div class="sub_title">
+                                        @item.Description
+                                    </div>
+                                </div>
+                                <div class="notify_status">
+                                    @if (item.Status == 2)
+                                    {
+                                        <p>New</p>
+                                    }
+                                    else
+                                    {
+                                        <p>Success</p>
+                                    }
+                                </div>
+                            </li>
+                        }
+
+                    }
+                    <li class="show_all">
+                        <p class="link">Show All Activities</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="profile">
+            <div class="icon_wrap">
+                <img src="~/images/profile_pic.png" alt="profile_pic">
+                <span class="name">John Alex</span>
+                <i class="ti-angle-down"></i>
+            </div>
+
+            <div class="profile_dd">
+                <ul class="profile_ul">
+                    <li>
+                        <a class="settings" asp-action="Profile" asp-controller="Account">
+                            <span class="picon">
+                                <i class="ti-settings"></i>
+                            </span>Settings
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="logout" asp-action="Login" asp-controller="Account"><span class="picon"><i class="ti-power-off"></i></span>Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="popup">
+            <div class="shadow"></div>
+            <div class="inner_popup">
+                <div class="notification_dd">
+                    <ul class="notification_ul">
+                        <li class="title">
+                            <p>All Notifications</p>
+                            <p class="close"><i class="ti-close" aria-hidden="true"></i></p>
+                        </li>
+                        @if (notifiAll != null)
+                        {
+                            @foreach (var item in notifiAll)
+                            {
+                                <li class="starbucks success">
+                                    <div class="notify_data">
+                                        <div class="title">
+                                            @item.Name
+                                        </div>
+                                        <div class="sub_title">
+                                            @item.Description
+                                        </div>
+                                    </div>
+                                    <div class="notify_status">
+                                        @if (item.Status == 2)
+                                        {
+                                            <p>New</p>
+                                        }
+                                        else
+                                        {
+                                            <p>Success</p>
+                                        }
+                                    </div>
+                                </li>
+                            }
+
+                        }
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+    </header>
+    <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+        <img src="~/images/logo.jpg" alt="logo" width="250px ">
+        <ul class="nav menu">
+
+            <li>
+                <a asp-action="MemberCooperative" asp-controller="MemberCooperative">
+                    <svg class="glyph stroked male user ">
+                        <use xlink:href="#stroked-male-user" />
+                    </svg>Quản lý thành viên
+                </a>
+            </li>
+            <li>
+                <a asp-action="ComfirmMemberCooperative" asp-controller="MemberCooperative">
+                    <svg class="glyph stroked star">
+                        <use xlink:href="#stroked-star" />
+                    </svg>Quản lý tham gia hộp tác xã
+                </a>
+            </li>
+            <li>
+                <a asp-action="StaffCooperative" asp-controller="AccountCooperative">
+                    <svg class="glyph stroked male user ">
+                        <use xlink:href="#stroked-male-user" />
+                    </svg>Quản lý nhân viên
+                </a>
+            </li>
+            <li>
+                <a asp-action="CooperativeRoomCooperative" asp-controller="CooperativeRoomCooperative">
+                    <svg class="glyph stroked clipboard with paper">
+                        <use xlink:href="#stroked-clipboard-with-paper" />
+                    </svg>Quản lý khu vực sản xuất
+                </a>
+            </li>
+
+            <li>
+                <a asp-action="FishCategoryCooperative" asp-controller="FishCategoryCooperative">
+                    <svg class="glyph stroked notepad">
+                        <use xlink:href="#stroked-notepad" />
+                    </svg>Quản lý giống cá
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    @RenderBody()
+
+    <!--/.main-->
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script src="~/js/mychart.js"></script>
+    <script src="~/js/jquery-1.11.1.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/bootstrap-table.js"></script>
+    <script src="~/js/notification_o.js"></script>
+    <script src="~/js/image.js"></script>
+
+</body>
+
+</html>

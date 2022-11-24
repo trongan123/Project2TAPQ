@@ -1,0 +1,60 @@
+﻿@model BusinessObjects.Models.Pond
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutFarm.cshtml";
+}
+<link rel="stylesheet" href="~/css/cssfarm/detailpond.css">
+<link rel="stylesheet" href="~/css/cssfarm/index_user.css">
+<main>
+            <div class="card-wrapper">
+                <div class="card">
+                    <!-- card left -->
+                    <div class="product-imgs">
+                        <div class="img-display">
+                            <div class="img-showcase">
+                                <img src="@Model.Image" class="imgpond" alt="shoe image">	
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- card right -->
+                    <div class="product-content">
+                        <h2 class="product-title">@Model.Name </h2>
+                    
+        
+        
+                        <div class="product-detail">
+                            <h2>Thông số của ao </h2>
+                            <hr>
+                            <ul>
+                                <li>Loại: <span>@Model.IdFcategoryNavigation.CategoryName</span></li>
+                                <hr>
+                                <li>Diên Tích: <span>@Model.PondArea m&sup2;</span></li>
+                                <hr>
+                                <li>Số Lượng Giống: <span>@Model.QuantityOfFingerlings </span></li>
+                                
+                                <hr>
+                                <li>Ngày Bắt Đầu: <span>@Model.StartDay</span></li>
+                                <hr>
+                                <li>Ngày Kết Thúc dự kiến: <span>@Model.EndDay </span> </li>
+                                <hr>                             
+                            </ul>
+                        </div>
+        
+                        <div class="purchase-info">
+                            <a asp-action="Pond" asp-controller="Pond">
+                            <button type="button" class="btn">
+                             <i class="fa fa-arrow-left" ></i>Back
+                            </button></a>
+                        </div>
+        
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+    
+  
+    </main>

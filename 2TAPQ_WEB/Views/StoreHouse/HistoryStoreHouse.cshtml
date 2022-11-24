@@ -1,0 +1,93 @@
+﻿@model IEnumerable<BusinessObjects.Models.HistoryStoreHouse>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutFarm.cshtml";
+    Pager pager = new Pager();
+    int pageNo = 0;
+    if (ViewBag.Pager != null)
+    {
+        pager = ViewBag.Pager;
+        pageNo = pager.CurrentPage;
+    }
+    int idpo = 0;
+}
+<link rel="stylesheet" href="~/css/cssfarm/user.css">
+<main>
+    <div class="table">
+        <div class="table-users">
+            <div class="header">Lịch Sử Kho</div>
+
+            <table cellspacing="0">
+                <tr>
+                    <th>Tên sản phẩm</th>
+                    <th>Số lượng</th>
+                    <th>Nhân viên</th>
+                    <th>Ngày Nhập</th>
+                    <th>Note</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    DateTime d = Convert.ToDateTime(@item.Date);
+
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Quanlity</td>
+                        <td>@item.IdStaffNavigation.Fullname</td>
+                        <td>@d.ToString("dd/M/yyyy")</td>
+                        <td>@item.Note</td>
+                    </tr>
+                }
+            </table>
+
+        </div>
+        <div class="right-bar">
+            <form class="example" asp-action="SearchHistory">
+                <input class="search_user" type="text" placeholder="Search.." name="search">
+                <button class="btn_search " type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <hr>
+
+        </div>
+    </div>
+
+
+    <div class="w3-center w3-padding-16">
+        <div class="w3-bar">
+            @if (pager.TotalPages > 0)
+            {
+
+                int a = pageNo;
+                int b = pageNo;
+                if (pageNo > 1)
+                {
+                    a = pageNo - 1;
+                }
+                if (pageNo < pager.EndPage)
+                {
+                    b = pageNo + 1;
+                }
+                @if (@ViewBag.Search == null)
+                {
+                    <a asp-controller="StoreHouse" asp-action="HistoryStoreHouse" asp-route-pg="@a" class="w3-bar-item w3-button w3-hover-grey">«</a>
+
+                    @for (var pge = 1; pge <= pager.EndPage; pge++)
+                    {
+                        <a asp-controller="StoreHouse" asp-action="HistoryStoreHouse" asp-route-pg="@pge" class="w3-bar-item w3-grey w3-button">@pge</a>
+                    }
+                    <a asp-controller="StoreHouse" asp-action="HistoryStoreHouse" asp-route-pg="@b" class="w3-bar-item w3-button w3-hover-grey">»</a>
+                }
+                else
+                {
+                    <a asp-controller="StoreHouse" asp-action="HistoryStoreHouse" asp-route-pg="@a" asp-route-sea="@ViewBag.Search" class="w3-bar-item w3-button w3-hover-grey">«</a>
+
+                    @for (var pge = 1; pge <= pager.EndPage; pge++)
+                    {
+                        <a asp-controller="StoreHouse" asp-action="HistoryStoreHouse" asp-route-pg="@pge" asp-route-sea="@ViewBag.Search" class="w3-bar-item w3-grey w3-button">@pge</a>
+                    }
+                    <a asp-controller="StoreHouse" asp-action="HistoryStoreHouse" asp-route-pg="@b" asp-route-sea="@ViewBag.Search" class="w3-bar-item w3-button w3-hover-grey">»</a>
+                }
+
+            }
+        </div>
+    </div>
+</main>

@@ -1,0 +1,29 @@
+header {
+    position: fixed;
+    left: 240px;
+    top: 0;
+    z-index: 100;
+    width: calc(100% - 240px);
+    background: #fff;
+    height: 60px;
+    padding: 0rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    border-bottom: 1px solid #ccc;
+    transition: left 500ms;
+}
+
+.search-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.search-wrapper input {
+    border: 0;
+    outline: 0;
+    padding: 1rem;
+    height: 38px;
+}
+
+

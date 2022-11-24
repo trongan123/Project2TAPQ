@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutCooperative.cshtml";
+}
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li>
+                <a href="#">
+                    <svg class="glyph stroked home">
+                        <use xlink:href="#stroked-home"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="active">Danh sách sản xuất</li>
+        </ol>
+    </div>
+    <!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Danh sách sản xuất</h1>
+        </div>
+    </div>
+    <!--/.row-->
+
+    <div class="alert alert-success">Thay Đổi Trạng Trái Thành Công !</div>
+
+    <div id="toolbar" class="select_area">
+        <select name="" class="form-control" onmousedown="if(this.options.length>2){this.size=2;}"
+                onchange='this.size=0;'>
+            <option value="1"><a asp-action="CooperativeRoomCooperative" asp-controller="CooperativeRoomCooperative">Diện Tích</a></option>
+            <option value="2">Số Lượng Ao</option>
+            <option value="3">Sản Lượng</option>
+            <option value="4"></option>
+
+
+
+        </select>
+
+
+    </div>
+    <div class="row">
+
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+
+
+
+                    <div class="graphbox">
+                        <!-- <div class="box">
+                            <canvas id="myChart"></canvas>
+                        </div> -->
+                        <div class="box">
+                            <canvas id="earning"></canvas>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <!--/.row-->
+
+
+</div>

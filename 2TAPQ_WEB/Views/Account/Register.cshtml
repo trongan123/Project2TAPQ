@@ -1,0 +1,130 @@
+﻿@model BusinessObjects.Models.Account
+
+
+@{
+    Layout = "";
+    IEnumerable<BusinessObjects.Models.Ward> DetailWard = ViewBag.Ward as IEnumerable<BusinessObjects.Models.Ward>;
+    IEnumerable<BusinessObjects.Models.District> DetailDistrict = ViewBag.District as IEnumerable<BusinessObjects.Models.District>;
+    IEnumerable<BusinessObjects.Models.Province> DetailProvince = ViewBag.Province as IEnumerable<BusinessObjects.Models.Province>;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/StyleRegister.css">
+    <title>register screen</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="form-title">Registeration</h1>
+        <form asp-action="Register">
+              <input type="hidden" asp-for="IdAcc" value="A000000001" />
+                    <input type="hidden" asp-for="Status" value="1" />
+                    <input type="hidden" asp-for="Role" value="2" />
+
+            <div class="main-user-info">
+                <div class="user-input-box">
+                    <label for="fullName">Full Name</label>
+                    <input type="text"  asp-for="Fullname" id="fullName" name="fullName" required placeholder="Enter Full Name">
+                    
+                </div>
+
+                <div class="user-input-box">
+                    <label for="userName">User Name</label>
+                    <input type="text" asp-for="Username" id="userName" name="userName" required placeholder="Enter User Name">
+                     
+                </div>
+
+                <div class="user-input-box">
+                    <label for="password">Password</label>
+                    <input type="password"  asp-for="Password" id="password" name="password" required  pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}"
+                                                    oninvalid="this.setCustomValidity('Pass is >8 and have char and number')"
+                                                    oninput="this.setCustomValidity('')" placeholder="Enter Password">
+                    
+                </div>
+
+                <div class="user-input-box">
+                    <label for="email">Email</label>
+                    <input type="text"  asp-for="Email" id="email" name="email" required pattern='^[\w-\.]+@@([\w-]+\.)+[\w-]{2,4}$'
+                                                    oninvalid="this.setCustomValidity('Email is Wrong format')"
+                                                    oninput="this.setCustomValidity('')" placeholder="Enter Email">
+                     
+                </div>
+
+
+                <div class="user-input-box">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Enter Password Again">
+                   
+                </div>
+
+                <div class="user-input-box">
+                    <label for="birthday">Birthday</label>
+                    <input type="date"  asp-for="Birthday" id="birthday" name="birthday" required placeholder="Enter Birthday">
+                    
+                </div>
+                <div class="user-input-box">
+                    <label for="phone">Phone</label>
+                    <input type="text"  asp-for="Phone" id="Phone" name="Phone" required pattern='^(\+84|0[3|5|7|8|9])+([0-9]{8})'
+                                                    oninvalid="this.setCustomValidity('Phone is Wrong format')"
+                                                    oninput="this.setCustomValidity('')" placeholder="Enter Phone">
+                    
+                </div>
+                 <div class="user-input-box">
+                    <label for="address">Address</label>
+                    <input type="text"  asp-for="Address" id="Address" name="Address" required  placeholder="Enter Address detail">
+                     
+                </div>
+
+                <div class="user-input-box">
+                    <div class="user-input-box2">
+                        <label for="ward">Ward</label>
+                        <select  asp-for="IdWard" class="form-control" onmousedown="if(this.options.length>5){this.size=5;}"
+                                onchange='this.size=0;'>
+                        @foreach(var item in DetailWard){
+                            <option value="@item.IdWard">@item.Name</option>
+                            
+                        }
+                        </select>
+                    </div>
+
+                    <div class="user-input-box2">
+                        <label for="district">District</label>
+                        <select name="" class="form-control" onmousedown="if(this.options.length>5){this.size=5;}"
+                                onchange='this.size=0;'>
+                            @foreach(var item in DetailDistrict){
+                            <option value="@item.IdDistrict">@item.Name</option>
+                            
+                        }
+                        </select>
+                    </div>
+                </div>
+                <div class="user-input-box3">
+                    <label for="province">Province</label>
+                    <select name="" class="form-control" onmousedown="if(this.options.length>5){this.size=5;}"
+                            onchange='this.size=0;'>
+                         @foreach(var item in DetailProvince){
+                            <option value="@item.IdProvince">@item.Name</option>
+                            
+                        }
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="form-submit-btn">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+    </div>
+
+
+   
+
+</body>
+
+</html>

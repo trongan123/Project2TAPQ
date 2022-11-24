@@ -1,0 +1,72 @@
+﻿@model BusinessObjects.Models.Account
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutFarm.cshtml";
+    BusinessObjects.Models.Account farm = ViewBag.Farm as BusinessObjects.Models.Account;
+}
+<link rel="stylesheet" href="~/css/cssfarm/createPond.css">
+<main>
+    <div class="testbox">
+        <form asp-action="CreateStaff">
+
+            <input type="hidden" asp-for="IdAcc" value="A000000001" />
+            <input type="hidden" asp-for="Status" value="1" />
+            <input type="hidden" asp-for="Role" value="2" />
+            <input type="hidden" asp-for="IdWard" value="@farm.IdWard" />
+            <input type="hidden" asp-for="Address" value="@farm.Address" />
+            <input type="hidden" asp-for="Image" id="ImageA" value="" />
+            <div class="banner">
+                <h1>Thông tin nhân viên cần nhập</h1>
+                <img class="img_background" id="imgA" src="~/images/background.jpg" alt="">
+            </div>
+
+            <div class="item">
+                <label>Upload a profile picture: <input type="file" name="FileAvata" id="FileAvata"/></label>
+            </div>
+
+            <div class="item">
+                <label for="name">Tên nhân viên<span>*</span></label>
+                <input id="Fullname" asp-for="Fullname" type="text" name="Fullname" required />
+            </div>
+
+            <div class="item">
+                <label for="name">UserName<span>*</span></label>
+                <input id="Username" asp-for="Username" type="text" name="Username" required />
+            </div>
+
+            <div class="item">
+                <label for="name">PassWord<span>*</span></label>
+                <input id="Password" asp-for="Password" type="text" name="Password" required />
+            </div>
+
+            <div class="item">
+                <label for="email">Email nhân viên<span>*</span></label>
+                <input id="email" asp-for="Email" type="email" name="email" required />
+            </div>
+            <div class="item">
+                <label for="phone">Số điện thoại <span>*</span></label>
+                <input id="Phone" asp-for="Phone" type="phone" name="Phone" required />
+            </div>
+            <div class="item">
+                <label for="phone">Birthday<span>*</span></label>
+                <input id="Birthday" asp-for="Birthday" type="date" name="Birthday" required />
+            </div>
+            <div class="item">
+                <label for="phone">Lương<span>*</span></label>
+                <input id="salary" type="text" name="salary" required />
+            </div>
+            <div class="item">
+                <label>Chức vụ<span>*</span></label>
+                <select name="idRole" style="width:98% ; height: 34.5px;">
+                    <option value="RL00000001">Nhân Viên Ao</option>
+                    <option value="RL00000002">Nhận Viên Kho</option>
+                    <option value="RL00000003">Nhân Viên Quản Lý</option>
+                </select>
+            </div>
+            <div class="btn-block">
+                <button type="submit" href="/">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+</main>
+   <script src="~/js/base64.js"></script>

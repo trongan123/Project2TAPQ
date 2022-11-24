@@ -1,0 +1,54 @@
+﻿@model BusinessObjects.Models.ItemStoreHouse
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutFarm.cshtml";
+    BusinessObjects.Models.StoreHouse store = ViewBag.Store as BusinessObjects.Models.StoreHouse;
+    IEnumerable<BusinessObjects.Models.ItemCategory> DetailItemCategory = ViewBag.ItemCategory as IEnumerable<BusinessObjects.Models.ItemCategory>;
+}
+<link rel="stylesheet" href="~/css/cssfarm/createPond.css">
+<main>
+    <div class="testbox">
+        <form asp-action="AddItem">
+            <input type="hidden" asp-for="IdSHouse" value="@store.IdSHouse" />
+            <input type="hidden" asp-for="IdItemStoreHouse" value="ISH0000001" />
+
+            <div class="banner">
+                <h1>Thông tin sản phẩm</h1>
+                <img class="img_background" src="~/images/fc.jpg" alt="">
+            </div>
+
+            <div class="item">
+                <label for="name">Tên sản phẩm<span>*</span></label>
+                <input id="Name" asp-for="Name" name="name" required />
+            </div>
+
+            <div class="item">
+                <label for="name">Số lượng<span>*</span></label>
+                <input id="Quanlity" asp-for="Quanlity" name="Quanlity" class="form-control"  pattern="^\d+$"
+                                                    oninvalid="this.setCustomValidity('Chỉ được nhập số')"
+                                                    oninput="this.setCustomValidity('')" required />
+            </div>
+
+            <div class="item">
+                <label for="city">Loại <span>*</span></label>
+                <select asp-for="IdItemCategory" id="name">
+                    @if (@DetailItemCategory != null)
+                    {
+                        foreach (var item in @DetailItemCategory)
+                        {
+                            <option value="@item.IdItemCategory">@item.Name</option>
+
+                        }
+                    }
+                </select>
+            </div>
+            <div class="item">
+                <label for="name">Số lượng<span>*</span></label>
+                <textarea id="Note" type="Note" asp-for="Note" required></textarea>
+            </div>
+            <div class="btn-block">
+                <button type="submit">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+</main>

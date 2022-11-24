@@ -1,0 +1,14 @@
+D:\Visual Studio\2TAPQ\BusinessObjects\bin\Debug\net6.0\BusinessObjects.deps.json
+D:\Visual Studio\2TAPQ\BusinessObjects\bin\Debug\net6.0\BusinessObjects.runtimeconfig.json
+D:\Visual Studio\2TAPQ\BusinessObjects\bin\Debug\net6.0\BusinessObjects.dll
+D:\Visual Studio\2TAPQ\BusinessObjects\bin\Debug\net6.0\BusinessObjects.pdb
+D:\Visual Studio\2TAPQ\BusinessObjects\obj\Debug\net6.0\BusinessObjects.csproj.AssemblyReference.cache
+D:\Visual Studio\2TAPQ\BusinessObjects\obj\Debug\net6.0\BusinessObjects.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio\2TAPQ\BusinessObjects\obj\Debug\net6.0\BusinessObjects.AssemblyInfoInputs.cache
+D:\Visual Studio\2TAPQ\BusinessObjects\obj\Debug\net6.0\BusinessObjects.AssemblyInfo.cs
+D:\Visual Studio\2TAPQ\BusinessObjects\obj\Debug\net6.0\BusinessObjects.csproj.CoreCompileInputs.cache
+D:\Visual Studio\2TAPQ\BusinessObjects\obj\Debug\net6.0\BusinessObjects.dll
+D:\Visual Studio\2TAPQ\BusinessObjects\obj\Debug\net6.0\refint\BusinessObjects.dll
+D:\Visual Studio\2TAPQ\BusinessObjects\obj\Debug\net6.0\BusinessObjects.pdb
+D:\Visual Studio\2TAPQ\BusinessObjects\obj\Debug\net6.0\BusinessObjects.genruntimeconfig.cache
+D:\Visual Studio\2TAPQ\BusinessObjects\obj\Debug\net6.0\ref\BusinessObjects.dll

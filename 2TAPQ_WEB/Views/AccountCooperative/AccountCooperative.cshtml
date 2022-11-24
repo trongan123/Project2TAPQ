@@ -1,0 +1,113 @@
+﻿@model BusinessObjects.Models.Account
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutCooperative.cshtml";
+}
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+
+    <!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Thông Tin Hợp Tác Xã</h1>
+        </div>
+    </div>
+    <!--/.row-->
+
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <form asp-action="EditAccountCooperative">
+                        <div class="row">
+                            <div class="col-md-3 border-right">
+                                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                                    <img class="rounded-circle mt-5" width="150px"
+                                         src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="text-black"></span><span> </span>
+                                </div>
+                                <input asp-for="Image" class="input--style-4" type="file" id="fileUpload">
+                            </div>
+                            <div class="col-md-5 border-right">
+                                <div class="p-3 py-5">
+                                    <input type="hidden" asp-for="IdAcc" />
+                                    <input type="hidden" asp-for="Status" />
+                                    <input type="hidden" asp-for="Role" />
+                                    <input type="hidden" asp-for="Password" />
+                                    <input type="hidden" asp-for="DateJoin" />
+                                    <input type="hidden" asp-for="IdWard" />
+                                    <input type="hidden" asp-for="Address" />
+
+                                    <div class="row mt-2">
+                                        <div class="col-md-6">
+                                            <label class="labels">Tài Khoản</label><input type="text"
+                                                                                          class="form-control" asp-for="Username">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="labels">Khu Vực</label><input type="text"
+                                                                                        class="form-control" value="@Model.IdWardNavigation.IdDistrictNavigation.IdProvinceNavigation.Name" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-12">
+                                            <label class="labels">Số Điện Thoại</label><input type="text" class="form-control" asp-for="Phone">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="labels">Họ & Tên</label><input type="text"
+                                                                                         class="form-control" asp-for="Fullname">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="labels">Mật Khẩu</label><input type="text"
+                                                                                         class="form-control" value="******" disabled> 
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="labels">Ngày Sinh</label><input type="date"
+                                                                                          class="form-control" asp-for="Birthday">
+                                        </div>
+
+
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <label class="labels">Quận/Huyện</label><input type="text"
+                                                                                           class="form-control" value="@Model.IdWardNavigation.IdDistrictNavigation.Name">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="labels">Phường/xã</label><input type="text"
+                                                                                          class="form-control" value="@Model.IdWardNavigation.Name">
+                                        </div>
+                                    </div>
+                                    <div class="mt-5 text-center">
+                                        <button class="btn btn-primary profile-button"
+                                                type="submit">
+                                            Save Profile
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 py-5">
+
+                                    <div class="col-md-12">
+                                        <label class="labels">Join Code</label><input type="text"
+                                                                                      class="form-control" value="@ViewBag.JoinCode" disabled>
+                                    </div>
+                                    <br>
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+</div>

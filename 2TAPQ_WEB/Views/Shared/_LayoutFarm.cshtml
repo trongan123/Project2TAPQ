@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" href="~/css/cssfarm/footer.css">
+    <link rel="stylesheet" href="~/css/cssfarm/header.css">
+    <link rel="stylesheet" href="~/css/cssfarm/modal.css">
+
+    <link rel="stylesheet" href="~/css/cssfarm/notification.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+</head>
+@{
+
+    IEnumerable<BusinessObjects.Models.Notify> notifiAll = ViewBag.notifiAll as IEnumerable<BusinessObjects.Models.Notify>;
+    IEnumerable<BusinessObjects.Models.Notify> notifi = ViewBag.notifi as IEnumerable<BusinessObjects.Models.Notify>;
+    var not = ViewBag.notifiNum;
+}
+<body>
+
+    <input type="checkbox" id="sidebar-toggle">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3 class="brand">
+                <span class="ti-flag-alt-2"></span>
+                <span>2TAPQ</span>
+            </h3>
+            <label for="sidebar-toggle" class="ti-menu-alt"></label>
+        </div>
+
+        <div class="sidebar-menu">
+            <ul>
+                @if (@ViewBag.User != null)
+                {
+                    @if (@ViewBag.User.IdRoleStaff == null || @ViewBag.User.IdRoleStaffNavigation.IdRole == "RL00000001" || @ViewBag.User.IdRoleStaffNavigation.IdRole == "RL00000003")
+                    {
+                        <li>
+                            <a asp-action="Pond" asp-controller="Pond">
+                                <span class="ti-home"></span>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        }
+                    @if (@ViewBag.User.IdRoleStaff == null || @ViewBag.User.IdRoleStaffNavigation.IdRole == "RL00000003")
+                    {
+                        <li>
+                            <a asp-action="StaffFarm" asp-controller="Account">
+                                <span class="ti-agenda"></span>
+                                <span>Quản lý nhân viên</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-action="Receipts" asp-controller="ReceiptsPayment">
+                                <span class="ti-agenda"></span>
+                                <span>Quản lý thu</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-action="Payment" asp-controller="ReceiptsPayment">
+                                <span class="ti-agenda"></span>
+                                <span>Quản lý chi</span>
+                            </a>
+                        </li>
+                    }
+                    @if (@ViewBag.User.IdRoleStaff == null || @ViewBag.User.IdRoleStaffNavigation.IdRole == "RL00000002" || @ViewBag.User.IdRoleStaffNavigation.IdRole == "RL00000003")
+                    {
+                        <li>
+                            <a asp-action="StoreHouse" asp-controller="StoreHouse">
+                                <span class="ti-notepad"></span>
+                                <span>Quản lý Kho</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-action="HistoryStoreHouse" asp-controller="StoreHouse">
+                                <span class="ti-write"></span>
+                                <span>Quản lý lịch sử kho</span>
+                            </a>
+                        </li>
+                    }
+
+                }
+            </ul>
+
+        </div>
+    </div>
+
+
+    <div class="main-content">
+
+        <header>
+
+
+            <div class="notifications">
+                <div class="icon_wrap ">
+                    <i class="ti-bell"></i>
+                    <span class="badge" id="notify">@ViewBag.notifiNum</span>
+                </div>
+
+                <div class="notification_dd">
+                    <ul class="notification_ul">
+                        @if (notifi != null)
+                        {
+                            @foreach (var item in notifi)
+                            {
+                                <li class="starbucks success">
+
+                                    <div class="notify_data">
+                                        <div class="title">
+                                            @item.Name
+                                        </div>
+                                        <div class="sub_title">
+                                            @item.Description
+                                        </div>
+                                    </div>
+                                    <div class="notify_status">
+                                        @if (item.Status == 2)
+                                        {
+                                            <p>New</p>
+                                        }
+                                        else
+                                        {
+                                            <p>Success</p>
+                                        }
+                                    </div>
+                                </li>
+                            }
+
+                        }
+                        <li class="show_all">
+                            <p class="link">Show All Activities</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="profile">
+                <div class="icon_wrap">
+                    <img src="~/images/profile_pic.png" alt="profile_pic">
+                    <span class="name">John Alex</span>
+                    <i class="ti-angle-down"></i>
+                </div>
+
+                <div class="profile_dd">
+                    <ul class="profile_ul">
+                        <li>
+                            <a class="settings" asp-action="Profile" asp-controller="Account">
+                                <span class="picon">
+                                    <i class="ti-settings"></i>
+                                </span>Settings
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="logout" asp-action="Login" asp-controller="Account"><span class="picon"><i class="ti-power-off"></i></span>Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popup">
+                <div class="shadow"></div>
+                <div class="inner_popup">
+                    <div class="notification_dd">
+                        <ul class="notification_ul">
+                            <li class="title">
+                                <p>All Notifications</p>
+                                <p class="close"><i class="ti-close" aria-hidden="true"></i></p>
+                            </li>
+                            @if (notifiAll != null)
+                            {
+                                @foreach (var item in notifiAll)
+                                {
+                                    <li class="starbucks success">
+                                        <div class="notify_data">
+                                            <div class="title">
+                                                @item.Name
+                                            </div>
+                                            <div class="sub_title">
+                                                @item.Description
+                                            </div>
+                                        </div>
+                                        <div class="notify_status">
+                                            @if (item.Status == 2)
+                                            {
+                                                <p>New</p>
+                                            }
+                                            else
+                                            {
+                                                <p>Success</p>
+                                            }
+                                        </div>
+                                    </li>
+                                }
+
+                            }
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </header>
+
+        @RenderBody()
+
+        <footer>
+            <div class="container">
+                <!--Bắt Đầu Nội Dung Giới Thiệu-->
+                <div class="noi-dung about">
+                    <h2>Về Chúng Tôi</h2>
+                    <p>
+                        Trang web sẽ cung cấp đầy đủ các chức năng mà người dùng cần và sẽ nâng cấp trang web thường
+                        xuyên
+                    </p>
+                    <ul class="social-icon">
+                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <!--Kết Thúc Nội Dung Giới Thiệu-->
+                <!--Bắt Đầu Nội Dung Đường Dẫn-->
+                <div class="noi-dung links">
+                    <h2>Đường Dẫn</h2>
+                    <ul>
+                        <li><a href="#">Trang Chủ</a></li>
+                        <li><a href="#">Về Chúng Tôi</a></li>
+                        <li><a href="#">Thông Tin Liên Lạc</a></li>
+                        <li><a href="#">Dịch Vụ</a></li>
+                        <li><a href="#">Điều Kiện Chính Sách</a></li>
+                    </ul>
+                </div>
+                <!--Kết Thúc Nội Dung Đường Dẫn-->
+                <!--Bắt Đâu Nội Dung Liên Hệ-->
+                <div class="noi-dung contact">
+                    <h2>Thông Tin Liên Hệ</h2>
+                    <ul class="info">
+                        <li>
+                            <span><i class="fa fa-map-marker"></i></span>
+                            <span>
+                                Đường Số 1<br />
+                                Quận 1, Thành Phố Hồ Chí Minh<br />
+                                Việt Nam
+                            </span>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-phone"></i></span>
+                            <p>
+                                <a href="#">+84 123 456 789</a>
+                                <br />
+                                <a href="#">+84 987 654 321</a>
+                            </p>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-envelope"></i></span>
+                            <p><a href="#">diachiemail@gmail.com</a></p>
+                        </li>
+                    </ul>
+                </div>
+                <!--Kết Thúc Nội Dung Liên Hệ-->
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script src="~/js/notify.js"></script>
+    <script src="~/js/base64staff.js"></script>
+</body>
+
+</html>

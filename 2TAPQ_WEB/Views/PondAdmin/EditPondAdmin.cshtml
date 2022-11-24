@@ -1,0 +1,99 @@
+﻿@model BusinessObjects.Models.Pond
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    IEnumerable<BusinessObjects.Models.FishCategory> DetailFishCategory = ViewBag.FishCategory as IEnumerable<BusinessObjects.Models.FishCategory>;
+}
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li>
+                <a href="#">
+                    <svg class="glyph stroked home">
+                        <use xlink:href="#stroked-home"></use>
+                    </svg>
+                </a>
+            </li>
+            <li><a href="pound.html">Quản lý ao</a></li>
+            <li class="active">Sửa ao</li>
+        </ol>
+    </div>
+    <!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Sửa ao</h1>
+        </div>
+    </div>
+    <!--/.row-->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="alert alert-danger">Name đã tồn tại !</div>
+
+                    <form asp-action="EditPond" method="post">
+                        <div class="col-md-6">
+                            <input type="hidden" asp-for="IdAcc" />
+                            <input type="hidden" asp-for="IdPond" />
+                            <input type="hidden" asp-for="Status" />
+                            <input type="hidden" asp-for="Image" id="Imagep" name="Image"/>
+                            <div class="form-group">
+                                <label>Tên ao</label>
+                                <input asp-for="Name" required name="Name" class="form-control" placeholder="">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Điệm tích ao</label>
+                                <input asp-for="PondArea" required name="PondArea" type="text" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Giống cá</label>
+                                <select asp-for="IdFcategory" name="IdFcategory" class="form-control">
+                                    @foreach (var item in DetailFishCategory)
+                                    {
+                                        <option value="@item.IdFcategory">@item.CategoryName</option>
+                                    }
+                                </select>
+                            </div>
+                            <div asp-for="IdAcc" class="form-group">
+                                <label>Lượng cá giống</label>
+                                <input asp-for="QuantityOfFingerlings" required name="QuantityOfFingerlings" type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Mùa vụ</label>
+                                <select asp-for="Session" name="Session" class="form-control">
+                                    <option value=1>Quý 1</option>
+                                    <option value=2>Quý 2</option>
+                                    <option value=3>Quý 3</option>
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+
+                             <div class="form-group">
+                                <label>Ảnh ao</label>
+
+                                <input  name="Image"   id="imagepond" type="file">
+                                <br>
+                                <div>
+                                    <img id="imagepond1" src=@Model.Image height="200px" width="220px">
+                                </div>
+                            </div>
+
+                            <button name="sbm" type="submit" class="btn btn-success">Sửa ao</button>
+                            <button type="reset" class="btn btn-default">Làm mới</button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div><!-- /.col-->
+    </div><!-- /.row -->
+
+</div>

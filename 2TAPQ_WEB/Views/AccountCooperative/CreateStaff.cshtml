@@ -1,0 +1,90 @@
+﻿@model BusinessObjects.Models.Account
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutCooperative.cshtml";
+    BusinessObjects.Models.Account farm = ViewBag.Farm as BusinessObjects.Models.Account;
+}
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li>
+                <a href="#">
+                    <svg class="glyph stroked home">
+                        <use xlink:href="#stroked-home"></use>
+                    </svg>
+                </a>
+            </li>
+            <li><a href="Member.html">>Danh sách nhân viên</a></li>
+            <li class="active">Thêm Nhân viên kiểm soát</li>
+        </ol>
+    </div>
+    <!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Thêm Nhân viên kiểm soát</h1>
+        </div>
+    </div>
+    <!--/.row-->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="col-md-8">
+
+                        <!-- <div class="alert alert-success">Thêm thành công !</div> -->
+
+                        <form asp-action="CreateStaff">
+                            <input type="hidden" asp-for="IdAcc" value="A000000001" />
+                            <input type="hidden" asp-for="Status" value="1" />
+                            <input type="hidden" asp-for="Role" value="3" />
+                            <input type="hidden" asp-for="IdWard" value="@farm.IdWard" />
+                            <input type="hidden" asp-for="Address" value="@farm.Address" />
+                            <input type="hidden" asp-for="Image" id="ImageA" value="" />
+                            <input type="hidden" name="idRole" value="RL00000004" />
+                            <div class="form-group">
+                                <label>Họ & Tên</label>
+                                <input id="Fullname" asp-for="Fullname" type="text" name="Fullname" class="form-control" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                  <input id="email" asp-for="Email" type="email" name="email" class="form-control" required />
+                            </div>
+                            <div class="form-group">
+                                <label>UserName</label>
+                                 <input id="Username" asp-for="Username" type="text" name="Username" class="form-control" required />
+                            </div> 
+                            <div class="form-group">
+                                <label>Password</label>
+                                 <input id="Password" asp-for="Password" type="text" name="Password" class="form-control" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input id="Phone" asp-for="Phone" type="phone" name="Phone" class="form-control" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Birthday</label>
+                                 <input id="Birthday" asp-for="Birthday" type="date" name="Birthday" class="form-control" required />
+                            </div>
+                             <div class="form-group">
+                                <label>Lương</label>
+                                 <input id="salary" type="text" name="salary" class="form-control" required />
+                            </div>
+                             <div class="form-group">
+                                <label>Chức vụ</label>
+                                <input name="sta" value="Ban Kiểm Soát" required type="text" class="form-control" disabled>
+                            </div>
+                             
+
+                           
+                            <button name="sbm" type="submit" class="btn btn-success">Thêm mới</button>
+                            <button type="reset" class="btn btn-default">Làm mới</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div><!-- /.col-->
+    </div><!-- /.row -->
+
+</div>

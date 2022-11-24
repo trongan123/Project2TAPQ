@@ -1,0 +1,172 @@
+﻿@model IEnumerable<BusinessObjects.Models.CooperativeRoom>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    Pager pager = new Pager();
+    int pageNo = 0;
+    if (ViewBag.Pager != null)
+    {
+        pager = ViewBag.Pager;
+        pageNo = pager.CurrentPage;
+    }
+}
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li>
+                <a href="#">
+                    <svg class="glyph stroked home">
+                        <use xlink:href="#stroked-home"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="active">Danh sách hộp tác xã </li>
+        </ol>
+    </div>
+    <!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Danh sách hộp tác xã </h1>
+        </div>
+    </div>
+    <!--/.row-->
+    @*  <div class="alert alert-success">Thay Đổi Trạng Trái Thành Công !</div>*@
+    <div id="toolbar" class="btn-group">
+        <a asp-action="CreateCooperativeAdmin" class="btn btn-success">
+
+            <i class="glyphicon glyphicon-plus"></i> Thêm hộp tác xã
+        </a>
+
+
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form asp-action="SearchCoop">
+                        <div id="toolbar" class="btn-group"
+                             style="  position: relative; float: right;margin-top: 2px; ">
+
+                            <button type="submit" class="btn btn-link">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+
+                        </div>
+                        <div id="toolbar" class="select_area"
+                             style=" width: 200px ; position: relative; float: right;margin-top: 11px;">
+
+                            <input type="text" name="search" class="form-control" placeholder="Search Phone">
+
+                        </div>
+                    </form>
+
+                    <table data-toolbar="#toolbar" data-toggle="table">
+
+                        <thead>
+                            <tr>
+
+
+                                <th data-field="name" data-sortable="true">Full Name</th>
+                                <th data-field="price" data-sortable="true">Email</th>
+                                <th data-field="username" data-sortable="true">UserName</th>
+                                <th data-field="joinCode" data-sortable="true">joinCode</th>
+                                <th data-field="phone" data-sortable="true">Phone</th>
+                                <th data-field="address" data-sortable="true">Address</th>
+                                <th data-field="date" data-sortable="true">Date Join</th>
+                                <th>Pondarea</th>
+                                <th>Quyền</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+
+                                    <td style="">@item.IdCooNavigation.Fullname</td>
+                                    <td style="">@item.IdCooNavigation.Email</td>
+                                    <td style="">@item.IdCooNavigation.Username</td>
+                                    <td style="">@item.JoinCode</td>
+                                    <td style="">@item.IdCooNavigation.Phone</td>
+                                    <td style="">@item.IdCooNavigation.Address</td>
+                                    <td style="">@item.IdCooNavigation.DateJoin</td>
+
+                                    <td>@item.PondArea</td>
+                                    <td><span class="label label-warning">Cooperative</span></td>
+                                    <td class="form-group">
+                                        <a asp-action="EditCooperativeAdmin" asp-route-id="@item.IdCooNavigation.IdAcc" class="btn btn-primary">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                        </a>
+                                        <a href="" class="btn btn-danger" onclick="do_thing()">
+                                            <i class="glyphicon glyphicon-remove"></i>
+                                        </a>
+                                        <a href="" class="btn btn-success"><i class="glyphicon glyphicon-ok"></i></a>
+
+                                    </td>
+                                </tr>
+                            }
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="panel-footer">
+                     @if (pager.TotalPages > 0)
+                    {
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                               @{
+                                    int a = pageNo;
+                                    int b = pageNo;
+                                    if (pageNo > 1)
+                                    {
+                                        a = pageNo - 1;
+                                    }
+                                    if (pageNo < pager.EndPage)
+                                    {
+                                        b = pageNo + 1;
+                                    }
+                                }
+                                @if (@ViewBag.Search == null)
+                                {
+                                    <li class="page-item"><a class="page-link" asp-controller="CooperativeAdmin" asp-action="CooperativeAdmin" asp-route-pg="@a">&laquo;</a></li>
+                                    @for (var pge = 1; pge <= pager.EndPage; pge++)
+                                    {
+                                        <li class="page-item" @(pge == pager.CurrentPage ? "active" : "")>
+                                            <a class="page-link" asp-controller="CooperativeAdmin" asp-action="CooperativeAdmin" asp-route-pg="@pge">@pge</a>
+                                        </li>
+                                    }
+                                    <li class="page-item"><a class="page-link" asp-controller="CooperativeAdmin" asp-action="CooperativeAdmin" asp-route-pg="@b">&raquo;</a></li>
+                                }
+                                else
+                                {
+                                    <li class="page-item"><a class="page-link" asp-controller="CooperativeAdmin" asp-action="CooperativeAdmin" asp-route-pg="@a" asp-route-sea="@ViewBag.Search">&laquo;</a></li>
+                                    @for (var pge = 1; pge <= pager.EndPage; pge++)
+                                    {
+                                        <li class="page-item" @(pge == pager.CurrentPage ? "active" : "")>
+                                            <a class="page-link" asp-controller="CooperativeAdmin" asp-action="CooperativeAdmin" asp-route-pg="@pge" asp-route-sea="@ViewBag.Search">@pge</a>
+                                        </li>
+                                    }
+                                    <li class="page-item"><a class="page-link" asp-controller="CooperativeAdmin" asp-action="CooperativeAdmin" asp-route-pg="@b" asp-route-sea="@ViewBag.Search">&raquo;</a></li>
+                                }
+                            </ul>
+
+                        </nav>
+                    }
+                     
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+    <!--/.row-->
+
+
+</div>

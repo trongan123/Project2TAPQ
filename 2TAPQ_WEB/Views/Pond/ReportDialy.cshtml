@@ -1,0 +1,38 @@
+﻿@model BusinessObjects.Models.PondDiary
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutFarm.cshtml";
+}
+<link rel="stylesheet" href="~/css/report.css">
+<main>
+    <div class="testbox">
+        <form asp-action="ReportDialy">            
+            <input type="hidden" asp-for="IdPond" value="@ViewBag.idPond" />
+            <input type="hidden" asp-for="IdDiary" value="PD00000001" />
+            <input type="hidden" asp-for="FishStatus" value="Good" />
+            <div class="banner">
+                <h1>Thông tin nhân viên cần nhập</h1>
+                <img class="img_background" src="~/images/background.jpg" alt="">
+            </div>        
+            <div class="item">
+                <label for="city">Mật độ nước <span>*</span></label>
+                <input id="WaterLevel" asp-for="WaterLevel"  type="text"  name="WaterLevel" required="" />
+            </div>
+            <div class="item">
+                <label for="state">Độ mặn <span>*</span></label>
+                <input id="Sanility" asp-for="Sanility" type="text" name="Sanility" required="" />
+            </div>
+            <div class="item">
+                <label for="state">Độ pH <span>*</span></label>
+                <input id="Ph" asp-for="Ph" type="text" name="Ph" required="" />
+            </div>
+            <div class="item">
+                <label for="state">Nhiệt độ <span>*</span></label>
+                <input id="Temperature" asp-for="Temperature" type="text" name="Temperature" required="" />
+            </div>         
+            <div class="btn-block">
+                <button type="submit" >SUBMIT</button>
+            </div>
+        </form>
+    </div>
+</main>

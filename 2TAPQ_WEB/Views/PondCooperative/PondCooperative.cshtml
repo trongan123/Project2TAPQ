@@ -1,0 +1,187 @@
+﻿@model IEnumerable<BusinessObjects.Models.Pond>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutCooperative.cshtml";
+    Pager pager = new Pager();
+    int pageNo = 0;
+    if (ViewBag.Pager != null)
+    {
+        pager = ViewBag.Pager;
+        pageNo = pager.CurrentPage;
+    }
+    int idpo = 0;
+}
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li>
+                <a href="#">
+                    <svg class="glyph stroked home">
+                        <use xlink:href="#stroked-home"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="active">Danh sách ao</li>
+        </ol>
+    </div>
+    <!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Danh sách ao</h1>
+        </div>
+    </div>
+    <!--/.row-->
+    <div class="alert alert-success">Thay Đổi Trạng Trái Thành Công !</div>
+    <div id="toolbar" class="btn-group">
+        <a asp-action="AddPondCooperative" asp-route-idacc="@ViewBag.Idacc" class="btn btn-success">
+            <i class="glyphicon glyphicon-plus"></i> Thêm ao
+        </a>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form asp-action="SearchPond">
+                        <input type="hidden" name="idacc" value="@ViewBag.Idacc" />
+                        <div id="toolbar" class="btn-group"
+                             style="  position: relative; float: right;margin-top: 2px; ">
+
+                            <button type="submit" class="btn btn-link">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+
+                        </div>
+                        <div id="toolbar" class="select_area"
+                             style=" width: 200px ; position: relative; float: right;margin-top: 11px;">
+
+                            <input type="text" name="search" class="form-control" placeholder="Search Name">
+
+                        </div>
+                    </form>
+
+                    <table data-toolbar="#toolbar" data-toggle="table">
+
+                        <thead>
+                            <tr>
+
+                                <th data-field="name" data-sortable="true">Tên ao</th>
+
+                                <th>Ảnh ao</th>
+                                <th>Mùa vụ</th>
+                                <th>Điệm tích ao</th>
+                                <th>Loại cá</th>
+                                <th>Sản lượng đầu</th>
+                                <th>Ngày bắc đầu</th>
+                                <th>Trạng thái cá</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                idpo++;
+                                <tr>
+
+                                    <td style="">@item.Name</td>
+                                    <td style="text-align: center"><img src=@item.Image height="150px" width="170px" /></td>
+                                    <td>Quý @item.Session</td>
+                                    <td>@item.PondArea m&sup2;</td>
+                                    <td>@item.IdFcategoryNavigation.CategoryName</td>
+                                    <td>@item.QuantityOfFingerlings</td>
+                                    <td>@item.StartDay</td>
+                                    <td><span class="label label-success">ok</span></td>
+                                    <td class="form-group">
+                                        <a asp-action="EditPondCooperative" asp-route-id="@item.IdPond" class="btn btn-primary">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-danger" onclick="document.getElementById('@idpo').style.display='block'">
+                                            <i class="glyphicon glyphicon-remove"></i>
+                                        </a>
+                                        <div id="@idpo" class="modal">
+                                            <span onclick="document.getElementById('@idpo').style.display='none'"
+                                              class="close" title="Close Modal">×</span>
+
+
+                                            <div class="modal-content ">
+                                                <div class="container1">
+                                                    <h1>Xóa Chủ Hộ</h1>
+                                                    <p>Bạn có chắc là muốn xóa không?</p>
+
+                                                    <div class="clearfix">
+                                                        <button type="button"
+                                                            onclick="document.getElementById('@idpo').style.display='none'"
+                                                            class="cancelbtn">
+                                                            Thoát
+                                                        </button>
+                                                        <a asp-action="DeletePondCooperative" asp-route-id="@item.IdPond" asp-route-idacc="@ViewBag.Idacc" >
+                                                            <button type="button"
+                                                                class="deletebtn">
+                                                                Xóa
+                                                            </button>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="panel-footer">
+                   @if (pager.TotalPages > 0)
+                    {
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                @{
+                                    int a = pageNo;
+                                    int b = pageNo;
+                                    if (pageNo > 1)
+                                    {
+                                        a = pageNo - 1;
+                                    }
+                                    if (pageNo < pager.EndPage)
+                                    {
+                                        b = pageNo + 1;
+                                    }
+                                }
+                                @if (@ViewBag.Search == null)
+                                {
+                                    <li class="page-item"><a class="page-link" asp-controller="PondCooperative" asp-action="PondCooperative" asp-route-pg="@a" asp-route-idacc="@ViewBag.Idacc">&laquo;</a></li>
+                                    @for (var pge = 1; pge <= pager.EndPage; pge++)
+                                    {
+                                        <li class="page-item" @(pge == pager.CurrentPage ? "active" : "")>
+                                            <a class="page-link" asp-controller="PondCooperative" asp-action="PondCooperative" asp-route-pg="@pge" asp-route-idacc="@ViewBag.Idacc">@pge</a>
+                                        </li>
+                                    }
+                                    <li class="page-item"><a class="page-link" asp-controller="PondCooperative" asp-action="PondCooperative" asp-route-pg="@b" asp-route-idacc="@ViewBag.Idacc">&raquo;</a></li>
+                                }
+                                else
+                                {
+                                    <li class="page-item"><a class="page-link" asp-controller="PondCooperative" asp-action="PondCooperative" asp-route-pg="@a" asp-route-sea="@ViewBag.Search" asp-route-idacc="@ViewBag.Idacc">&laquo;</a></li>
+                                    @for (var pge = 1; pge <= pager.EndPage; pge++)
+                                    {
+                                        <li class="page-item" @(pge == pager.CurrentPage ? "active" : "")>
+                                            <a class="page-link" asp-controller="PondCooperative" asp-action="PondCooperative" asp-route-pg="@pge" asp-route-sea="@ViewBag.Search" asp-route-idacc="@ViewBag.Idacc">@pge</a>
+                                        </li>
+                                    }
+                                    <li class="page-item"><a class="page-link" asp-controller="PondCooperative" asp-action="PondCooperative" asp-route-pg="@b" asp-route-sea="@ViewBag.Search" asp-route-idacc="@ViewBag.Idacc">&raquo;</a></li>
+                                }
+                            </ul>
+
+                        </nav>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/.row-->
+
+</div>

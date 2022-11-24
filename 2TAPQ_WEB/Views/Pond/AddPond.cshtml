@@ -1,0 +1,61 @@
+﻿@model BusinessObjects.Models.Pond
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutFarm.cshtml";
+    IEnumerable<BusinessObjects.Models.FishCategory> DetailFishCategory = ViewBag.FishCategory as IEnumerable<BusinessObjects.Models.FishCategory>;
+}
+<link rel="stylesheet" href="~/css/cssfarm/createPond.css">
+<main>
+    <div class="testbox">
+        <form asp-action="AddPond">
+            <input type="hidden" asp-for="IdAcc" value="@ViewBag.Idacc" />
+            <input type="hidden" asp-for="IdPond" value="P000000001" />
+            <input type="hidden" asp-for="Status" value="1" />
+             <input type="hidden" asp-for="Image" value="" id="ImagePond" name="Image"/>
+            <div class="banner">
+                <h1>Thông tin ao cần nhập</h1>
+                <img class="img_background" src="/img/background.jpg" id="imgp" alt="">
+            </div>
+
+
+            <div class="item">
+                <label>Mùa Vụ<span>*</span></label>
+                <select asp-for="Session" name="Session" style="width:98% ; height: 34.5px;">
+                    <option value=1>Quý 1</option>
+                    <option value=2>Quý 2</option>
+                    <option value=3>Quý 3</option>
+                </select>
+            </div>
+            <div class="item">
+                <label for="state">Tên Ao<span>*</span></label>
+                <input id="Name" type="text" asp-for="Name" name="Name" required />
+            </div>
+            <div class="item">
+                <label for="state">Diện tích ao<span>*</span></label>
+                <input id="PondArea" type="text" asp-for="PondArea" name="PondArea" required />
+            </div>
+            <div class="item">
+                <label for="city"> Lượng cá giống <span>*</span></label>
+                <input id="city" type="text" name="city" required />
+            </div>
+            <div class="item">
+                <label>Giống Cá<span>*</span></label>
+                <select asp-for="IdFcategory" style="width:98% ; height: 34.5px;">
+                    @foreach (var item in DetailFishCategory)
+                    {
+                        <option value="@item.IdFcategory">@item.CategoryName</option>
+
+                    }
+                </select>
+            </div>
+
+            <div class="item">
+                <label>Upload a profile picture: <input id="FilePond" type="file"  /></label>
+            </div>
+            <div class="btn-block">
+                <button type="submit" href="/">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+</main>
+<script src="~/js/base64.js"></script>

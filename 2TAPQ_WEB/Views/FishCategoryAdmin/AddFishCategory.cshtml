@@ -1,0 +1,79 @@
+﻿@model BusinessObjects.Models.FishCategory
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li>
+                <a href="#">
+                    <svg class="glyph stroked home">
+                        <use xlink:href="#stroked-home"></use>
+                    </svg>
+                </a>
+            </li>
+            <li><a href="species.html">Quản lý chủng loại cá</a></li>
+            <li class="active">Thêm cá</li>
+        </ol>
+    </div>
+    <!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Thêm chủng loại cá</h1>
+        </div>
+    </div>
+    <!--/.row-->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <form asp-action="AddFishCategory" >
+                        <div class="col-md-6">
+                            <input type="hidden" asp-for="IdFcategory" value="FC00000001" />
+                            <input type="hidden" asp-for="Status" value="1" />
+                            <input type="hidden" asp-for="Image" value="" id="Imagef" name="Image"/>
+                          
+                            <div class="form-group">
+                                <label>Tên cá</label>
+                                <input asp-for="CategoryName" required name="CategoryName" class="form-control" placeholder="">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Thời gian thu hoạch</label>
+                                <input asp-for="HarvestTime" required name="HarvestTime" type="text" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Mô tả sản phẩm</label>
+                                <textarea asp-for="Description" required name="Description" class="form-control" rows="3"></textarea>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <div class="form-group">
+                                <label>Ảnh cá</label>
+                                <input  class="input--style-4" type="file" id="fileUpload" >
+                                <br>
+                                <div>
+                                    <img src="~/images/catre.jpg" id="img" height="200px" width="220px">
+                                </div>
+                            </div>
+
+                            <button name="sbm" type="submit" class="btn btn-success">Thêm mới</button>
+                            <button type="reset" class="btn btn-default">Làm mới</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!-- /.col-->
+    </div><!-- /.row -->
+
+</div>
+
+

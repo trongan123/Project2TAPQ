@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutFarm.cshtml";
+
+}
+<link rel="stylesheet" href="~/css/cssfarm/detail.css">
+<main>
+    <div class="w3-center">
+        <figure class="snip1557">
+            <img src="~/images/background.jpg" alt="sample96" />
+            <i class="ion-android-arrow-forward"></i>
+            <h3>Chi tiết ao</h3>
+            <a asp-action="Detailpond" asp-route-idPond="@ViewBag.idPond"></a>
+        </figure>
+        <figure class="snip1557">
+            <img src="~/images/rp.jpg" alt="sample100" />
+            <i class="ion-android-arrow-forward"></i>
+            <h3>Báo cáo hàng ngày</h3>
+            <a asp-action="ReportDialy" asp-route-idPond="@ViewBag.idPond"></a>
+        </figure>
+        <figure class="snip1557">
+            <img src="~/images/fc.jpg" alt="sample101" />
+            <i class="ion-android-arrow-forward"></i>
+            <h3>Lịch sử báo cáo</h3>
+            <a asp-action="HistoryDaily" asp-route-idPond="@ViewBag.idPond"></a>
+        </figure>
+    </div>
+
+</main>
